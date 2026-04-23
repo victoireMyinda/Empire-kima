@@ -1,0 +1,411 @@
+.appShell {
+  min-height: 100vh;
+  color: var(--color-text);
+}
+
+.container {
+  width: min(1160px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.section {
+  padding: clamp(3.5rem, 8vw, 6.2rem) 0;
+}
+
+.sectionAlt {
+  background: color-mix(in srgb, var(--color-panel) 88%, black);
+}
+
+.heroSection {
+  padding-top: clamp(4.8rem, 10vw, 7rem);
+}
+
+.heroGrid,
+.mediaLayout {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(1rem, 3vw, 2rem);
+  align-items: start;
+}
+
+.heroAside {
+  display: grid;
+  gap: 1rem;
+}
+
+.sectionHead {
+  max-width: 70ch;
+  margin-bottom: 1.5rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.8rem;
+  color: var(--color-primary-strong);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.lead {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: var(--color-muted-light);
+  margin-bottom: 0.9rem;
+  max-width: 62ch;
+}
+
+.intro,
+.mutedText {
+  color: var(--color-muted);
+  max-width: 66ch;
+}
+
+.actionRow {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.85rem;
+  padding: 0 1.05rem;
+  border-radius: 999px;
+  font-weight: 700;
+  border: 1px solid transparent;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.primaryButton {
+  background: var(--color-primary);
+  color: var(--color-text-dark);
+  box-shadow: 0 10px 24px rgb(201 161 90 / 30%);
+}
+
+.secondaryButton {
+  border-color: var(--color-border);
+  color: var(--color-muted-light);
+  background: transparent;
+}
+
+.primaryButton:hover,
+.secondaryButton:hover {
+  transform: translateY(-1px);
+}
+
+.primaryButton:focus-visible,
+.secondaryButton:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.panelCard,
+.processCard,
+.planCard,
+.contactForm,
+.ctaPanel {
+  border: 1px solid var(--color-border);
+  border-radius: 1.15rem;
+  background: var(--color-surface);
+}
+
+.panelCard,
+.processCard,
+.planCard {
+  padding: 1.2rem;
+}
+
+.highlightList {
+  list-style: none;
+  margin: 0.9rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.58rem;
+}
+
+.highlightList li {
+  position: relative;
+  padding-left: 1.1rem;
+  color: var(--color-muted-light);
+}
+
+.highlightList li::before {
+  content: '';
+  width: 0.48rem;
+  height: 0.48rem;
+  border-radius: 999px;
+  position: absolute;
+  left: 0;
+  top: 0.58rem;
+  background: var(--color-primary);
+}
+
+.cardsGridThree,
+.cardsGridFive,
+.planGrid,
+.projectGrid,
+.testimonialGrid {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.cardsGridThree {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.cardsGridFive {
+  margin-top: 0.9rem;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.processCard {
+  margin-top: 0.9rem;
+  border-style: dashed;
+}
+
+.processCard ol {
+  margin: 0.8rem 0 0;
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.42rem;
+  color: var(--color-muted-light);
+}
+
+.serviceList {
+  margin: 0.8rem 0 0;
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.42rem;
+  color: var(--color-muted-light);
+}
+
+.planGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.planCard:nth-child(2) {
+  border-color: var(--color-primary);
+  box-shadow: 0 12px 30px rgb(201 161 90 / 15%);
+}
+
+.projectGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.badge {
+  margin-top: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid var(--color-border-strong);
+  color: var(--color-primary-strong);
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.33rem 0.7rem;
+}
+
+.testimonialGrid {
+  margin-top: 0.9rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.testimonialGrid blockquote {
+  margin: 0;
+}
+
+.testimonialGrid p {
+  color: var(--color-muted-light);
+}
+
+.testimonialGrid cite {
+  margin-top: 0.9rem;
+  font-style: normal;
+  display: grid;
+  gap: 0.2rem;
+}
+
+.testimonialGrid span {
+  color: var(--color-muted);
+  font-size: 0.92rem;
+}
+
+.contactContent {
+  display: grid;
+  gap: 1rem;
+}
+
+.contactDetails {
+  list-style: none;
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  background: var(--color-surface);
+  display: grid;
+  gap: 0.58rem;
+  color: var(--color-muted-light);
+}
+
+.contactForm {
+  padding: 1rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.contactForm label {
+  font-size: 0.9rem;
+  color: var(--color-muted-light);
+}
+
+.contactForm input,
+.contactForm textarea {
+  width: 100%;
+  padding: 0.72rem 0.82rem;
+  border-radius: 0.72rem;
+  border: 1px solid var(--color-border);
+  background: var(--color-input-bg);
+  color: var(--color-text);
+  font: inherit;
+  box-sizing: border-box;
+}
+
+.contactForm input:focus-visible,
+.contactForm textarea:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+}
+
+.ctaSection {
+  padding-top: 0;
+}
+
+.ctaPanel {
+  padding: clamp(1.2rem, 3vw, 2.1rem);
+  text-align: center;
+  display: grid;
+  gap: 0.8rem;
+  justify-items: center;
+  background:
+    radial-gradient(circle at 0% 0%, rgb(201 161 90 / 20%), transparent 38%),
+    radial-gradient(circle at 100% 100%, rgb(240 212 142 / 14%), transparent 42%),
+    #121212;
+}
+
+.ctaPanel p {
+  max-width: 62ch;
+  color: var(--color-muted-light);
+}
+
+.siteFooter {
+  border-top: 1px solid var(--color-border);
+  padding: 1.2rem 0;
+}
+
+.whatsappFab {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 999px;
+  display: inline-grid;
+  place-items: center;
+  background: #25d366;
+  color: #fff;
+  box-shadow: 0 12px 24px rgb(0 0 0 / 26%);
+  z-index: 40;
+}
+
+.whatsappFab svg {
+  width: 1.7rem;
+  height: 1.7rem;
+  fill: currentcolor;
+}
+
+.whatsappFab:hover,
+.whatsappFab:focus-visible {
+  transform: translateY(-2px);
+}
+
+.footerInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.footerInner p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.footerInner a {
+  color: var(--color-muted-light);
+  text-decoration: none;
+}
+
+.footerInner a:hover,
+.footerInner a:focus-visible {
+  color: var(--color-primary-strong);
+}
+
+@media (max-width: 1080px) {
+  .cardsGridThree {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cardsGridFive {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .planGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonialGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .heroGrid,
+  .mediaLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .cardsGridFive {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .section {
+    padding: 3.8rem 0;
+  }
+
+  .cardsGridThree,
+  .cardsGridFive,
+  .projectGrid,
+  .testimonialGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .footerInner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .whatsappFab {
+    width: 3.1rem;
+    height: 3.1rem;
+    right: 0.8rem;
+    bottom: 0.8rem;
+  }
+}

@@ -1,0 +1,37 @@
+.wrapper {
+  margin: 0;
+  border-radius: 1.2rem;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  overflow: hidden;
+}
+
+.wrapper img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+}
+
+.wrapper figcaption {
+  padding: 0.7rem 0.85rem 0.85rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  color: var(--color-muted-light);
+  text-transform: uppercase;
+}
+
+.fallback {
+  aspect-ratio: 16 / 10;
+  border-radius: 1.2rem;
+  border: 1px dashed var(--color-border-strong);
+  background:
+    radial-gradient(circle at 10% 0%, rgb(201 161 90 / 22%), transparent 46%),
+    linear-gradient(135deg, #111 0%, #171717 100%);
+  display: grid;
+  place-items: center;
+  color: var(--color-primary-strong);
+  font-weight: 600;
+  padding: 1rem;
+  text-align: center;
+}
