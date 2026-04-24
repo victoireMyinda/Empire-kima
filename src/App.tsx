@@ -1,8 +1,11 @@
 import { useEffect, useMemo, useState } from 'react'
 import type { FormEvent } from 'react'
 import logoBlanc from './assets/logoblanc.png'
+import CertificationsGrid from './components/CertificationsGrid'
 import Header from './components/Header'
+import MediaGallery from './components/MediaGallery'
 import SectionImage from './components/SectionImage'
+import { certificationAssets, mediaAssets } from './data/assetResources'
 import { siteContent } from './data/siteContent'
 import type { Locale, Theme } from './data/siteContent'
 import styles from './App.module.css'
@@ -205,6 +208,51 @@ function App() {
                 </blockquote>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section id="medias" className={styles.section}>
+          <div className={styles.container}>
+            <div className={styles.sectionHead}>
+              <p className={styles.eyebrow}>{content.mediaSection.eyebrow}</p>
+              <h2>{content.mediaSection.title}</h2>
+              <p className={styles.mutedText}>{content.mediaSection.description}</p>
+            </div>
+            <MediaGallery
+              items={mediaAssets}
+              labels={{
+                open: content.mediaSection.open,
+                empty: content.mediaSection.empty,
+                close: content.mediaSection.close,
+                next: content.mediaSection.next,
+                previous: content.mediaSection.previous,
+                zoomIn: content.mediaSection.zoomIn,
+                zoomOut: content.mediaSection.zoomOut,
+                thumbnails: content.mediaSection.thumbnails,
+              }}
+            />
+          </div>
+        </section>
+
+        <section id="certifications" className={`${styles.section} ${styles.sectionAlt}`}>
+          <div className={styles.container}>
+            <div className={styles.sectionHead}>
+              <p className={styles.eyebrow}>{content.certificationsSection.eyebrow}</p>
+              <h2>{content.certificationsSection.title}</h2>
+              <p className={styles.mutedText}>{content.certificationsSection.description}</p>
+            </div>
+            <CertificationsGrid
+              items={certificationAssets}
+              labels={{
+                empty: content.certificationsSection.empty,
+                noResults: content.certificationsSection.noResults,
+                searchPlaceholder: content.certificationsSection.searchPlaceholder,
+                searchAria: content.certificationsSection.searchAria,
+                view: content.certificationsSection.view,
+                download: content.certificationsSection.download,
+                pdf: content.certificationsSection.pdf,
+              }}
+            />
           </div>
         </section>
 

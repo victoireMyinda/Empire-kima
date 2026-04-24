@@ -80,6 +80,31 @@ type SiteContent = {
     title: string
     projectBadge: string
   }
+  mediaSection: {
+    eyebrow: string
+    title: string
+    description: string
+    empty: string
+    open: string
+    close: string
+    next: string
+    previous: string
+    zoomIn: string
+    zoomOut: string
+    thumbnails: string
+  }
+  certificationsSection: {
+    eyebrow: string
+    title: string
+    description: string
+    empty: string
+    noResults: string
+    searchPlaceholder: string
+    searchAria: string
+    view: string
+    download: string
+    pdf: string
+  }
   projects: Project[]
   testimonials: Testimonial[]
   contact: {
@@ -144,6 +169,8 @@ export const siteContent: Record<Locale, SiteContent> = {
       { id: 'services', label: 'Services' },
       { id: 'maintenance', label: 'Maintenance' },
       { id: 'realisations', label: 'Realisations' },
+      { id: 'medias', label: 'Medias' },
+      { id: 'certifications', label: 'Certifications' },
       { id: 'contact', label: 'Contact' },
     ],
     header: {
@@ -306,6 +333,33 @@ export const siteContent: Record<Locale, SiteContent> = {
       title: 'Projets menes avec exigence et impact concret',
       projectBadge: 'Projet livre',
     },
+    mediaSection: {
+      eyebrow: 'Medias',
+      title: 'Galerie de references et interventions terrain',
+      description:
+        'Parcourez nos interventions recentes avec un affichage premium, zoom detaille et navigation fluide.',
+      empty: 'Aucun media disponible pour le moment.',
+      open: 'Ouvrir le media',
+      close: 'Fermer',
+      next: 'Suivant',
+      previous: 'Precedent',
+      zoomIn: 'Zoom +',
+      zoomOut: 'Zoom -',
+      thumbnails: 'Miniatures medias',
+    },
+    certificationsSection: {
+      eyebrow: 'Certifications',
+      title: 'Certifications professionnelles',
+      description:
+        'Consultez et telechargez nos certificats PDF valides pour verifier nos references techniques.',
+      empty: 'Aucune certification disponible pour le moment.',
+      noResults: 'Aucune certification trouvee pour cette recherche.',
+      searchPlaceholder: 'Rechercher par email ou texte...',
+      searchAria: 'Rechercher une certification par email ou texte',
+      view: 'Voir',
+      download: 'Telecharger',
+      pdf: 'PDF',
+    },
     projects: [
       {
         title: 'Installation CCTV villa',
@@ -433,6 +487,8 @@ export const siteContent: Record<Locale, SiteContent> = {
       { id: 'services', label: 'Services' },
       { id: 'maintenance', label: 'Maintenance' },
       { id: 'realisations', label: 'Projects' },
+      { id: 'medias', label: 'Media' },
+      { id: 'certifications', label: 'Certifications' },
       { id: 'contact', label: 'Contact' },
     ],
     header: {
@@ -594,6 +650,33 @@ export const siteContent: Record<Locale, SiteContent> = {
       eyebrow: 'Projects',
       title: 'Deliveries executed with precision and measurable impact',
       projectBadge: 'Delivered',
+    },
+    mediaSection: {
+      eyebrow: 'Media',
+      title: 'Project gallery and field interventions',
+      description:
+        'Explore recent interventions with premium display, detailed zoom, and smooth navigation.',
+      empty: 'No media available at the moment.',
+      open: 'Open media',
+      close: 'Close',
+      next: 'Next',
+      previous: 'Previous',
+      zoomIn: 'Zoom +',
+      zoomOut: 'Zoom -',
+      thumbnails: 'Media thumbnails',
+    },
+    certificationsSection: {
+      eyebrow: 'Certifications',
+      title: 'Professional certifications',
+      description:
+        'View and download our valid PDF certificates to verify our technical credentials.',
+      empty: 'No certifications available at the moment.',
+      noResults: 'No certification found for this search.',
+      searchPlaceholder: 'Search by email or text...',
+      searchAria: 'Search certification by email or text',
+      view: 'View',
+      download: 'Download',
+      pdf: 'PDF',
     },
     projects: [
       {
